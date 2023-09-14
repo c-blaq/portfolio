@@ -1,7 +1,20 @@
 import "./globals.css";
-import { Inter } from "next/font/google";
+import localFont from "next/font/local";
+import { Inter, Big_Shoulders_Display } from "next/font/google";
+import Header from "@/components/Header";
 
 const inter = Inter({ subsets: ["latin"] });
+
+const bigShoulderDisplay = Big_Shoulders_Display({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-big-shoulder",
+});
+const velodrama = localFont({
+  src: "../fonts/VelodromaBasic-Wide.otf",
+  variable: "--font-velodrama",
+  display: "swap",
+});
 
 export const metadata = {
   title: "Fathi Babayeju",
@@ -12,8 +25,10 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
-        <header>Hessader</header>
+      <body
+        className={`${inter.className} ${velodrama.variable} ${bigShoulderDisplay.variable}`}
+      >
+        <Header />
         {children}
       </body>
     </html>
