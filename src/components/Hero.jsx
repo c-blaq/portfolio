@@ -1,10 +1,12 @@
 import React from "react";
+import profileImg from "@/assets/png/profileImg.png";
+import Image from "next/image";
 
 const Hero = () => {
   return (
-    <div className="flex h-screen">
-      <div className="bg-secondary-blue-light flex-1 flex items-center">
-        <div className="max-w-[640px] ml-auto w-full px-4 lg:px-0">
+    <div className="flex max-h-screen">
+      <div className="bg-secondary-blue-light pt-20 flex-1 flex items-center">
+        <div className="max-w-[640px] ml-auto w-full px-4 2xl:pr-4 2xl:px-0">
           <h3 className="text-xl">Hey there</h3>
           <h1 className="font-bigShoulder leading-[100%] lg:text-[120px] uppercase mt-5">
             <span className="font-bold">Fathi</span> &nbsp; <br />
@@ -20,7 +22,7 @@ const Hero = () => {
           </p>
 
           <div className="flex gap-6 lg:gap-10">
-            <div>
+            <div className="text-center">
               <span className="text-textGray block mb-2">
                 Years of Experience
               </span>
@@ -29,9 +31,9 @@ const Hero = () => {
 
             <div className="bg-white w-[0.5px] mt-6 self-stretch"></div>
 
-            <div>
+            <div className="text-center">
               <span className="text-textGray block mb-2">
-                Years of Experience
+                Featured Projects
               </span>
               <b className="font-bigShoulder lg:text-6xl">+3</b>
             </div>
@@ -39,8 +41,15 @@ const Hero = () => {
         </div>
       </div>
 
-      <div className="bg-secondary-blue flex-1 flex items-center">
-        <div className="max-w-[640px] w-full ml-auto px-4">Image here</div>
+      <div className="bg-secondary-blue flex-1 flex items-center overflow-clip">
+        <div className="max-w-[640px] h-4/5 mx-auto ml-auto px-4 2xl:pr-4 2xl:px-0 lg:scale-110 mt-auto">
+          <Image
+            src={profileImg}
+            alt="profile image"
+            className="filter grayscale"
+            priority
+          />
+        </div>
       </div>
     </div>
   );
