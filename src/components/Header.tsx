@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import { Drawer } from "antd";
-import { MenuFoldOutlined, MenuUnfoldOutlined } from "@ant-design/icons";
+import { MenuUnfoldOutlined } from "@ant-design/icons";
 
 const Header: React.FC = () => {
   const NAV_ITEMS = [
@@ -19,7 +19,7 @@ const Header: React.FC = () => {
       href: "/",
     },
   ];
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState<boolean>(false);
 
   const showDrawer = () => {
     setOpen(true);
@@ -65,6 +65,7 @@ const Header: React.FC = () => {
                 key={label}
                 className="hover:text-neutral-white hover:bg-primary-dark hover:px-2 py-2 rounded-sm"
                 href={href}
+                onClick={onClose}
               >
                 {label}
               </Link>
