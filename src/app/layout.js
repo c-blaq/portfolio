@@ -1,6 +1,7 @@
 import "./globals.css";
 import localFont from "next/font/local";
 import { Inter, Big_Shoulders_Display } from "next/font/google";
+import { Layout } from "antd";
 import Header from "@/components/Header";
 
 const inter = Inter({ subsets: ["latin"] });
