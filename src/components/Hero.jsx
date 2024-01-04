@@ -1,6 +1,7 @@
 import React from "react";
 import profileImg from "@/assets/png/profileImg.png";
 import Image from "next/image";
+import Link from "next/link";
 
 const Hero = () => {
   return (
@@ -39,6 +40,15 @@ const Hero = () => {
             </div>
           </div>
         </div>
+      </div>
+
+      <div className="bg-white rounded-full w-[180px] h-[180px] absolute top-1/2 left-1/2 -ml-[90px] -mt-36 p-3">
+        <Link
+          href="/"
+          className="bg-primary w-full h-full rounded-full flex justify-center items-center font-bigShoulder font-semibold text-[40px] from-stone-600 rotate-[-30deg] hover:rotate-0 transition duration-300"
+        >
+          Let's <br /> Talk
+        </Link>
       </div>
 
       <div className="bg-secondary-blue flex-1 flex items-center overflow-clip">
