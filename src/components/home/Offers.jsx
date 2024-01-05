@@ -24,14 +24,14 @@ const Offers = () => {
         </div>
       </div>
 
-      <div className="py-20 px-5">
+      <div className="py-10 sm:py-20 px-5">
         <section className="max-w-7xl mx-auto">
           <SectionTitle
             title="Explore some of my best featured projects"
             description="Here are some of my exceptional projects, showcasing my diverse portfolio and my expertise in front-end development."
           />
 
-          <div className="mt-20 gap-5 grid grid-cols-3">
+          <div className="mt-10 sm:mt-16 md:mt-20 gap-5 grid sm:grid-cols-2 lg:grid-cols-3">
             <Card />
             <Card />
             <Card />
