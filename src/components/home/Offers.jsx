@@ -8,7 +8,7 @@ import { HiArrowRight } from "@/lib/reactIcons";
 const Offers = () => {
   return (
     <>
-      <div className="bg-primary-dark2 py-20 px-5">
+      <div className="bg-primary-dark2 py-10 sm:py-20 px-5">
         <div className="max-w-7xl mx-auto">
           <SectionTitle
             title="What I can do to help you build your product"
@@ -17,7 +17,7 @@ const Offers = () => {
             spellbound."
           />
 
-          <div className="mt-20 flex gap-5">
+          <div className="mt-10 sm:mt-16 md:mt-20 flex flex-col sm:flex-row gap-5">
             <OfferCard />
             <OfferCard />
           </div>

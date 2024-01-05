@@ -36,8 +36,8 @@ export default function Home() {
   return (
     <main>
       <Hero />
-      <section className="h-32">
-        <div className="text-5xl flex h-full justify-around items-center gap-5 max-w-7xl mx-auto">
+      <section className="h-20 md:h-32">
+        <div className="text-3xl sm:text-4xl md:text-5xl flex h-full justify-around items-center gap-5 max-w-7xl mx-auto">
           {SKILLS.map((skill, index) => (
             <div key={index} className="flex items-center justify-center">
               <Provider>
