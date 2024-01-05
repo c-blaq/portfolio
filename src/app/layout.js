@@ -3,6 +3,7 @@ import localFont from "next/font/local";
 import { Inter, Big_Shoulders_Display } from "next/font/google";
 import { Layout } from "antd";
 import Header from "@/components/Header";
+import Footer from "@/components/shared/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -31,6 +32,7 @@ export default function RootLayout({ children }) {
       >
         <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );
