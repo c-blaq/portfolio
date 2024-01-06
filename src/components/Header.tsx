@@ -56,7 +56,7 @@ const Header: React.FC = () => {
           placement="left"
           onClose={onClose}
           open={open}
-          width="30%"
+          width="45%"
           className="!bg-neutral-200"
         >
           <nav className="flex flex-col gap-4  text-black">
