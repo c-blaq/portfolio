@@ -1,7 +1,8 @@
-import Hero from "@/components/Hero";
+import Hero from "@/components/shared/Hero";
 import Card from "@/components/shared/Card";
 import SectionTitle from "@/components/shared/SectionTitle";
 import React from "react";
+import DiscussWMe from "@/components/shared/DiscussWMe";
 
 const Projects: React.FC = () => {
   return (
@@ -24,6 +25,7 @@ const Projects: React.FC = () => {
           </div>
         </section>
       </div>
+      <DiscussWMe />
     </>
   );
 };

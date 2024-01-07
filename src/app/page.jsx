@@ -2,11 +2,10 @@ import { FaHtml5, FaCss3Alt, FaReact, FaGitAlt } from "react-icons/fa";
 import { SiJavascript, SiNextdotjs } from "react-icons/si";
 import { Provider, Content, Root, Arrow, Portal, Trigger } from "@/lib/tooltip";
 
-import Hero from "@/components/Hero";
+import Hero from "@/components/shared/Hero";
 import Offers from "@/components/home/Offers";
 import Projects from "@/components/home/Projects";
-import Link from "next/link";
-import { HiArrowRight } from "react-icons/hi2";
+import DiscussWMe from "@/components/shared/DiscussWMe";
 
 export default function Home() {
   const SKILLS = [
@@ -69,19 +68,7 @@ export default function Home() {
 
       <Offers />
       <Projects />
-
-      <div className="py-10 lg:py-20 text-center bg-primary-dark">
-        <h2 className="text-2xl sm:text-4xl lg:text-6xl font-bigShoulder leading-[140%] uppercase font-bold">
-          Have an awesome project idea? <br /> <span>Let's discuss</span>
-        </h2>
-
-        <Link
-          href="/"
-          className="bg-secondary-blue-light hover:bg-secondary-blue transition duration-100 max-w-fit mx-auto mt-5 md:mt-10 flex items-center gap-1 py-2 px-4 rounded-sm"
-        >
-          Start your project <HiArrowRight />
-        </Link>
-      </div>
+      <DiscussWMe />
     </>
   );
 }
