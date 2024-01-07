@@ -4,6 +4,7 @@ import { Provider, Content, Root, Arrow, Portal, Trigger } from "@/lib/tooltip";
 
 import Hero from "@/components/Hero";
 import Offers from "@/components/home/Offers";
+import Projects from "@/components/home/Projects";
 
 export default function Home() {
   const SKILLS = [
@@ -65,6 +66,7 @@ export default function Home() {
       </section>
 
       <Offers />
+      <Projects />
     </main>
   );
 }
