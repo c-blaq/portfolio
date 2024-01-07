@@ -1,8 +1,7 @@
 import "./globals.css";
 import localFont from "next/font/local";
 import { Inter, Big_Shoulders_Display } from "next/font/google";
-import { Layout } from "antd";
-import Header from "@/components/Header";
+import Header from "@/components/shared/Header";
 import Footer from "@/components/shared/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -28,10 +27,10 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${inter.className} ${velodrama.variable} ${bigShoulderDisplay.variable}`}
+        className={`${inter.className} ${velodrama.variable} ${bigShoulderDisplay.variable} flex flex-col min-h-screen`}
       >
         <Header />
-        {children}
+        <main className="flex-1">{children}</main>
         <Footer />
       </body>
     </html>

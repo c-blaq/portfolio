@@ -8,7 +8,7 @@ const Header: React.FC = () => {
   const NAV_ITEMS = [
     {
       label: "Projects",
-      href: "/",
+      href: "/projects",
     },
     {
       label: "My Resume",
