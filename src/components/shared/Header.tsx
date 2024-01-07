@@ -1,8 +1,10 @@
 "use client";
 import React, { useState } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { Drawer } from "antd";
 import { MenuUnfoldOutlined } from "@ant-design/icons";
+import { twMerge } from "tailwind-merge";
 
 const Header: React.FC = () => {
   const NAV_ITEMS = [
@@ -12,13 +14,15 @@ const Header: React.FC = () => {
     },
     {
       label: "My Resume",
-      href: "/",
+      href: "/s",
     },
     {
       label: "Let's Talk",
-      href: "/",
+      href: "/contact-me",
     },
   ];
+
+  const pathname = usePathname();
   const [open, setOpen] = useState<boolean>(false);
 
   const showDrawer = () => {
@@ -28,7 +32,6 @@ const Header: React.FC = () => {
   const onClose = () => {
     setOpen(false);
   };
-
   return (
     <header className="absolute z-20 top-0 right-0 left-0 px-4 h-20">
       <div className="flex items-center justify-between h-full max-w-7xl mx-auto">
@@ -40,7 +43,14 @@ const Header: React.FC = () => {
 
         <nav className="hidden md:flex items-center gap-4 lg:gap-12">
           {NAV_ITEMS.map(({ label, href }) => (
-            <Link key={label} className="hover:text-textBlue-dark" href={href}>
+            <Link
+              key={label}
+              className={twMerge(
+                "hover:text-textBlue-dark",
+                pathname === href && "text-textBlue-dark"
+              )}
+              href={href}
+            >
               {label}
             </Link>
           ))}
@@ -63,7 +73,11 @@ const Header: React.FC = () => {
             {NAV_ITEMS.map(({ label, href }) => (
               <Link
                 key={label}
-                className="hover:text-neutral-white hover:bg-primary-dark hover:px-2 py-2 rounded-sm"
+                className={twMerge(
+                  "hover:text-neutral-white hover:bg-primary-dark hover:px-2 py-2 rounded-sm",
+                  pathname === href &&
+                    "text-neutral-white bg-primary-dark2 px-2"
+                )}
                 href={href}
                 onClick={onClose}
               >
