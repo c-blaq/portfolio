@@ -26,9 +26,9 @@ const Footer: React.FC = () => {
   return (
     <footer className="px-4 border-t border-white">
       <div className="max-w-7xl mx-auto">
-        <div className="flex flex-col sm:flex-row justify-between gap-5 py-10">
+        <div className="flex flex-col sm:flex-row justify-between gap-5 py-5 md:py-10">
           <div>
-            <h2 className="font-velodrama text-xl md:text-2xl mb-5">
+            <h2 className="font-velodrama text-xl md:text-2xl mb-3 sm:mb-5">
               <Link href="/" className="hover:text-textBlue">
                 Fathi<span className="text-textBlue">&#x3B;</span>
               </Link>
