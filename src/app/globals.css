@@ -10,3 +10,11 @@ body {
   background: var(--background);
   color: white;
 }
+
+/* inpput selected */
+.input:-internal-autofill-selected {
+  appearance: menulist-button;
+  background-image: none !important;
+  background-color: -internal-light-dark(red) !important;
+  color: fieldtext !important;
+}
