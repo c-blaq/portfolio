@@ -7,7 +7,12 @@ import Image from "next/image";
 function ContactMe() {
   return (
     <>
-      <Hero />
+      <Hero
+        heroText1="Contact"
+        heroText2="Me"
+        description="Ready to take your project to the next level? Look no further! Get in touch today to discuss how I can help you achieve your project goals. With a proven track record of delivering exceptional projects, I am ready to collaborate and transform your ideas into reality."
+        showContactLink={false}
+      />
       <div className="">
         <div className="max-w-7xl mx-auto py-10 md:py-20 px-5 2xl:px-0">
           <h2 className="text-2xl text-center lg:text-left sm:text-4xl lg:text-6xl font-bigShoulder leading-[140%] uppercase font-bold">

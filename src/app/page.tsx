@@ -37,7 +37,15 @@ export default function Home() {
 
   return (
     <>
-      <Hero />
+      <Hero
+        heroText1="Fathi"
+        heroText2="Babayeju"
+        description=" A passionate front-end developer with a creative flair and a knack
+            for turning ideas into beautiful, functional websites. With a
+            meticulous attention to detail and a deep understanding of HTML,
+            CSS, and JavaScript, I have mastered the art of crafting seamless
+            user experiences."
+      />
       <section className="h-20 md:h-32">
         <div className="text-3xl sm:text-4xl md:text-5xl flex h-full justify-around items-center gap-5 max-w-7xl mx-auto">
           {SKILLS.map((skill, index) => (

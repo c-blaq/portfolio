@@ -7,7 +7,12 @@ import DiscussWMe from "@/components/shared/DiscussWMe";
 const Projects: React.FC = () => {
   return (
     <>
-      <Hero />
+      <Hero
+        heroText1="All"
+        heroText2="Projects"
+        description="Here are some of my exceptional projects, showcasing my diverse portfolio and my expertise in front-end development."
+        showGreeting={false}
+      />
       <div className="py-10 sm:py-20 px-5">
         <section className="max-w-7xl mx-auto">
           <SectionTitle
