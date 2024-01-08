@@ -76,7 +76,7 @@ const Hero: React.FC<HeroProps> = ({
       )}
 
       <div className="bg-secondary-blue flex-1 hidden md:flex items-center overflow-clip">
-        <div className="max-w-[640px] h-4/5 mx-auto ml-auto px-4 2xl:pr-4 2xl:px-0 lg:scale-110 mt-auto">
+        <div className="max-w-[640px] h-4/5 mx-auto 2xl:mx-0 2xl:ml-28 px-4 2xl:pr-4 2xl:px-0 lg:scale-110 mt-auto">
           <Image
             src={profileImg}
             alt="profile image"
