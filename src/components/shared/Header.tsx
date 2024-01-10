@@ -45,7 +45,9 @@ const Header: React.FC = () => {
   useEffect(() => {
     if (isRouting) {
       setPrevPath(pathname);
-      const timeout = setTimeout(() => setIsRouting(false), 1200);
+      const timeout = setTimeout(() => {
+        setIsRouting(false);
+      }, 1200);
 
       return () => clearTimeout(timeout);
     }
