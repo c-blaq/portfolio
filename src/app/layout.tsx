@@ -23,7 +23,11 @@ export const metadata = {
     "Fathi is a Frontend Engineer who is highly skilled in implementing design systems and passionate about building long-lasting solutions related to the web",
 };
 
-export default function RootLayout({ children }) {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
     <html lang="en">
       <body
