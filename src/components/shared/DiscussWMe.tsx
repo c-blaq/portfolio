@@ -10,8 +10,8 @@ function DiscussWMe() {
       </h2>
 
       <Link
-        href="/"
-        className="bg-secondary-blue-light hover:bg-secondary-blue transition duration-100 max-w-fit mx-auto mt-5 md:mt-10 flex items-center gap-1 py-2 px-4 rounded-sm"
+        href="/contact-me"
+        className="bg-secondary-blue-light  md:hover:px-7 md:hover:bg-secondary-blue/50 transition-all duration-300 max-w-fit mx-auto mt-5 md:mt-10 flex items-center gap-1 py-2 px-4 rounded-sm"
       >
         Start your project <HiArrowRight />
       </Link>

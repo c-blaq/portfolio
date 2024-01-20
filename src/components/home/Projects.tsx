@@ -19,8 +19,8 @@ function Projects() {
           <Card />
         </div>
         <Link
-          href="/"
-          className="bg-secondary-blue-light hover:bg-secondary-blue transition duration-100 max-w-fit ml-auto mt-5 flex  items-center gap-1 py-2 px-4 rounded-sm"
+          href="/projects"
+          className="bg-secondary-blue-light md:hover:px-7 md:hover:bg-secondary-blue/50 transition-all duration-300 max-w-fit ml-auto mt-5 flex  items-center gap-1 py-2 px-4 rounded-sm"
         >
           All projects <HiArrowRight />
         </Link>

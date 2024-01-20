@@ -67,7 +67,7 @@ const Hero: React.FC<HeroProps> = ({
       {showContactLink && (
         <div className="bg-white hidden md:block rounded-full w-32 h-32 lg:w-40 lg:h-40 xl:w-[180px] xl:h-[180px] absolute top-1/2 left-1/2 -ml-16 -mt-24 lg:-ml-[90px] lg:-mt-36 p-3">
           <Link
-            href="/"
+            href="/contact-me"
             className="bg-primary w-full h-full rounded-full flex justify-center items-center font-bigShoulder font-semibold text-4xl lg:text-[40px] rotate-[-30deg] hover:rotate-0 hover:bg-primary-dark hover:text-textGray transition duration-300"
           >
             Let's <br /> Talk

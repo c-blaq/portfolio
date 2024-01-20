@@ -25,8 +25,8 @@ const Header: React.FC = () => {
 
   const pathname = usePathname();
   const [open, setOpen] = useState<boolean>(false);
-  const [isRouting, setIsRouting] = useState(false);
-  const [prevPath, setPrevPath] = useState("");
+  // const [isRouting, setIsRouting] = useState(false);
+  // const [prevPath, setPrevPath] = useState("");
 
   const showDrawer = () => {
     setOpen(true);
@@ -36,26 +36,27 @@ const Header: React.FC = () => {
     setOpen(false);
   };
 
-  useEffect(() => {
-    if (prevPath !== pathname) {
-      setIsRouting(true);
-    }
-  }, [pathname, prevPath]);
+  // useEffect(() => {
+  //   if (prevPath !== pathname) {
+  //     setIsRouting(true);
+  //   }
+  // }, [pathname, prevPath]);
 
-  useEffect(() => {
-    if (isRouting) {
-      setPrevPath(pathname);
-      const timeout = setTimeout(() => {
-        setIsRouting(false);
-      }, 1200);
+  // useEffect(() => {
+  //   if (isRouting) {
+  //     setPrevPath(pathname);
+  //     const timeout = setTimeout(() => {
+  //       setIsRouting(false);
+  //     }, 1200);
 
-      return () => clearTimeout(timeout);
-    }
-  }, [isRouting]);
+  //     return () => clearTimeout(timeout);
+  //   }
+  // }, [isRouting]);
 
   return (
     <header className="absolute z-20 top-0 right-0 left-0 px-4 h-20">
-      {isRouting && <PageTransition />}
+      {/* {isRouting && <PageTransition />} */}
+
       <div className="flex items-center justify-between h-full max-w-7xl mx-auto">
         <h2 className="font-velodrama text-xl md:text-2xl">
           <Link href="/" className="hover:text-textBlue-dark">

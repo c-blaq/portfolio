@@ -8,7 +8,7 @@ const Nav: React.FC<NavProp> = ({ className }) => {
   const NAV_ITEMS = [
     {
       label: "Projects",
-      href: "/",
+      href: "/projects",
     },
     {
       label: "My Resume",
@@ -16,7 +16,7 @@ const Nav: React.FC<NavProp> = ({ className }) => {
     },
     {
       label: "Let's Talk",
-      href: "/",
+      href: "/contact-me",
     },
   ];
   return (
