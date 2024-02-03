@@ -11,6 +11,19 @@ import Projects from "@/components/home/Projects";
 import DiscussWMe from "@/components/shared/DiscussWMe";
 import { useEffect } from "react";
 
+interface IProjects {
+  desc: string;
+  image: any;
+  name: string;
+  previewLink: string;
+  tags: string[];
+  _createdAt: string;
+  _id: string;
+  _rev: string;
+  _type: string;
+  _updatedAt: string;
+}
+
 export default function Home() {
   const SKILLS = [
     {
@@ -42,8 +55,8 @@ export default function Home() {
   const getProjects = async () => {
     const projectQuery = "*[_type == 'Projects']";
     const data = await client.fetch(projectQuery);
-    console.log(data);
-    return data;
+    console.log(data as IProjects);
+    return data as IProjects;
   };
 
   useEffect(() => {
