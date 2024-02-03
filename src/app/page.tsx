@@ -1,11 +1,15 @@
+"use client";
+
 import { FaHtml5, FaCss3Alt, FaReact, FaGitAlt } from "react-icons/fa";
 import { SiJavascript, SiNextdotjs } from "react-icons/si";
 import { Provider, Content, Root, Arrow, Portal, Trigger } from "@/lib/tooltip";
+import { client } from "../../sanity/lib/client";
 
 import Hero from "@/components/shared/Hero";
 import Offers from "@/components/home/Offers";
 import Projects from "@/components/home/Projects";
 import DiscussWMe from "@/components/shared/DiscussWMe";
+import { useEffect } from "react";
 
 export default function Home() {
   const SKILLS = [
@@ -34,6 +38,17 @@ export default function Home() {
       icon: <FaGitAlt />,
     },
   ];
+
+  const getProjects = async () => {
+    const projectQuery = "*[_type == 'Projects']";
+    const data = await client.fetch(projectQuery);
+    console.log(data);
+    return data;
+  };
+
+  useEffect(() => {
+    getProjects();
+  }, []);
 
   return (
     <>
