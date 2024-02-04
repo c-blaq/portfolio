@@ -6,9 +6,9 @@ import { urlForImage } from "../../../sanity/lib/image";
 
 const Card = ({ project }) => {
   return (
-    <div className="bg-primary-dark transition-all duration-100 hover:bg-secondary-blue group">
+    <div className="bg-primary-dark relative overflow-clip transition-all duration-100 hover:bg-secondary-blue group">
       <div
-        className={`bg-primary-dark2 max-w-full min-h-[150px] sm:min-h-[200px] relative group-hover:after:absolute group-hover:after:w-full group-hover:after:h-full group-hover:after:bg-black/20 transition duration-200`}
+        className={`bg-primary-dark2 group-hover:scale-110 max-w-full min-h-[150px] sm:min-h-[200px] relative group-hover:after:absolute group-hover:after:w-full group-hover:after:h-full group-hover:after:bg-black/20 transition duration-200`}
         style={{
           background: `url(${urlForImage(project.image.asset)}) center/cover`,
         }}
