@@ -3,8 +3,19 @@ import SectionTitle from "../shared/SectionTitle";
 import Card from "../shared/Card";
 import Link from "next/link";
 import { HiArrowRight } from "react-icons/hi2";
+import { IProjects } from "@/types/project";
+import { client } from "../../../sanity/lib/client";
 
-function Projects() {
+async function Projects() {
+  const getProjects = async () => {
+    const projectQuery = "*[_type == 'Projects']";
+    const data = await client.fetch(projectQuery);
+
+    return data as IProjects[];
+  };
+
+  const projects = await getProjects();
+
   return (
     <div className="py-10 sm:py-20 px-5">
       <section className="max-w-7xl mx-auto">
@@ -14,9 +25,9 @@ function Projects() {
         />
 
         <div className="mt-10 sm:mt-16 md:mt-20 gap-5 grid sm:grid-cols-2 lg:grid-cols-3">
-          <Card />
-          <Card />
-          <Card />
+          {projects.slice(0, 3).map((project) => (
+            <Card key={project._id} project={project} />
+          ))}
         </div>
         <Link
           href="/projects"

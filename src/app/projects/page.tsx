@@ -21,12 +21,12 @@ const Projects: React.FC = () => {
           />
 
           <div className="mt-10 sm:mt-16 md:mt-20 gap-5 grid sm:grid-cols-2 lg:grid-cols-3">
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
+            {/* <Card project={"a"} />
+            <Card project={"a"} />
+            <Card project={"a"} />
+            <Card project={"a"} />
+            <Card project={"a"} />
+            <Card project={"a"} /> */}
           </div>
         </section>
       </div>
