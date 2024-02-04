@@ -25,7 +25,10 @@ const Card = ({ project }) => {
         <div className="flex gap-4 justify-between">
           <div className="flex gap-2">
             {project.tags.map((t: string) => (
-              <label className="text-xs text-textGray lowercase bg-gray-700 group-hover:bg-secondary-blue-light p-2">
+              <label
+                key={t}
+                className="text-xs text-textGray lowercase bg-gray-700 group-hover:bg-secondary-blue-light p-2"
+              >
                 {t}
               </label>
             ))}
