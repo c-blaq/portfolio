@@ -3,17 +3,9 @@ import SectionTitle from "../shared/SectionTitle";
 import Card from "../shared/Card";
 import Link from "next/link";
 import { HiArrowRight } from "react-icons/hi2";
-import { IProjects } from "@/types/project";
-import { client } from "../../../sanity/lib/client";
+import { getProjects } from "@/api/project";
 
 async function Projects() {
-  const getProjects = async () => {
-    const projectQuery = "*[_type == 'Projects']";
-    const data = await client.fetch(projectQuery);
-
-    return data as IProjects[];
-  };
-
   const projects = await getProjects();
 
   return (
