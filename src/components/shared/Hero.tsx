@@ -58,7 +58,7 @@ const Hero: React.FC<HeroProps> = ({
               <span className="text-textGray block mb-2">
                 Featured Projects
               </span>
-              <b className="font-bigShoulder text-4xl lg:text-6xl">+3</b>
+              <b className="font-bigShoulder text-4xl lg:text-6xl">+8</b>
             </div>
           </div>
         </div>

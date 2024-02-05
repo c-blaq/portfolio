@@ -40,7 +40,7 @@ export default async function Home() {
       <Hero
         heroText1="Fathi"
         heroText2="Babayeju"
-        description=" A passionate front-end developer with a creative flair and a knack
+        description=" A passionate Frontend Engineer with a creative flair and a knack
             for turning ideas into beautiful, functional websites. With a
             meticulous attention to detail and a deep understanding of HTML,
             CSS, and JavaScript, I have mastered the art of crafting seamless

@@ -3,14 +3,20 @@ import React from "react";
 import { HiArrowUpRight } from "@/lib/reactIcons";
 import { IProjects } from "../../types/project";
 import { urlForImage } from "../../../sanity/lib/image";
+import { twMerge } from "tailwind-merge";
 
 const Card = ({ project }) => {
   return (
     <div className="bg-primary-dark relative overflow-clip transition-all duration-100 hover:bg-secondary-blue group">
       <div
-        className={`bg-primary-dark2 group-hover:scale-110 max-w-full min-h-[150px] sm:min-h-[200px] relative group-hover:after:absolute group-hover:after:w-full group-hover:after:h-full group-hover:after:bg-black/20 transition duration-200`}
+        className={twMerge(
+          "group-hover:scale-110 max-w-full min-h-[150px] sm:min-h-[200px] relative group-hover:after:absolute group-hover:after:w-full group-hover:after:h-full group-hover:after:bg-black/20 transition duration-200"
+        )}
         style={{
-          background: `url(${urlForImage(project.image.asset)}) center/cover`,
+          background: `url(${urlForImage(
+            project.image.asset
+          )}) no-repeat center/cover`,
+          backgroundColor: "#222A36",
         }}
       ></div>
 
@@ -22,8 +28,8 @@ const Card = ({ project }) => {
           <p className="text-sm">{project.desc}</p>
         </div>
 
-        <div className="flex gap-4 justify-between">
-          <div className="flex gap-2">
+        <div className="flex gap-4 items-start justify-between">
+          <div className="flex flex-wrap gap-2">
             {project.tags.map((t: string) => (
               <label
                 key={t}
