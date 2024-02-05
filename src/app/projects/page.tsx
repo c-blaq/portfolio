@@ -1,9 +1,16 @@
+import { Metadata } from "next";
 import Hero from "@/components/shared/Hero";
 import Card from "@/components/shared/Card";
 import SectionTitle from "@/components/shared/SectionTitle";
 import React from "react";
 import DiscussWMe from "@/components/shared/DiscussWMe";
 import { getProjects } from "@/api/project";
+
+export const metadata: Metadata = {
+  title: "Projects | Fathi Babayeju",
+  description:
+    "Here are some of my exceptional projects, showcasing my diverse portfolio and my expertise in front-end development.",
+};
 
 const Projects: React.FC = async () => {
   const projects = await getProjects();

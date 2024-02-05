@@ -1,3 +1,4 @@
+import { Metadata } from "next";
 import { FaHtml5, FaCss3Alt, FaReact, FaGitAlt } from "react-icons/fa";
 import { SiJavascript, SiNextdotjs } from "react-icons/si";
 import { Provider, Content, Root, Arrow, Portal, Trigger } from "@/lib/tooltip";
@@ -6,6 +7,12 @@ import Hero from "@/components/shared/Hero";
 import Offers from "@/components/home/Offers";
 import Projects from "@/components/home/Projects";
 import DiscussWMe from "@/components/shared/DiscussWMe";
+
+export const metadata: Metadata = {
+  title: "Fathi Babayeju - Frontend Engineer",
+  description:
+    "A passionate Frontend Engineer with a creative flair and a knack for turning ideas into beautiful, functional websites.",
+};
 
 export default async function Home() {
   const SKILLS = [

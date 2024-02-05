@@ -1,8 +1,14 @@
+import { Metadata } from "next";
 import React from "react";
 import Input from "@/components/contact/Input";
 import Hero from "@/components/shared/Hero";
 import contactImg from "@/assets/png/contact.png";
 import Image from "next/image";
+
+export const metadata: Metadata = {
+  title: "Contact | Fathi Babayeju",
+  description: "Have an awesome project idea? Let's discuss",
+};
 
 function ContactMe() {
   return (
