@@ -49,7 +49,7 @@ const Hero: React.FC<HeroProps> = ({
               <span className="text-textGray block mb-2">
                 Years of Experience
               </span>
-              <b className="font-bigShoulder text-4xl lg:text-6xl">+3</b>
+              <b className="font-bigShoulder text-4xl lg:text-6xl">+5</b>
             </div>
 
             <div className="bg-white w-[0.5px] mt-6 self-stretch"></div>
